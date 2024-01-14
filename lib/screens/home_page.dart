@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:momotalk/utils/constant.dart';
 import 'package:momotalk/utils/info_box.dart';
-import 'package:momotalk/utils/stduent_info.dart';
+import 'package:momotalk/utils/student_info.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
