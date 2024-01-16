@@ -7,13 +7,13 @@ class InfoBox extends StatelessWidget {
     required this.name,
     required this.message,
     required this.sukiLevel,
-    this.onInfoBoxTap,
+    required this.onInfoBoxTap,
   });
 
   final String name;
   final String message;
   final int sukiLevel;
-  final Function()? onInfoBoxTap;
+  final Function() onInfoBoxTap;
 
   @override
   Widget build(BuildContext context) {

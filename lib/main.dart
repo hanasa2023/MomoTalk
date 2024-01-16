@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MomoTalk',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.light(
+          primary: Colors.pink[200]!,
+          outline: Color(0xffc3c3c3),
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'MomoTalk'),

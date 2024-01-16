@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:momotalk/screens/personal_homepage.dart';
 import 'package:momotalk/utils/constant.dart';
 import 'package:momotalk/utils/info_box.dart';
 import 'package:momotalk/utils/student_info.dart';
@@ -24,15 +25,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static List<Widget> pages = <Widget>[
     //student page
-    ListView(
-      children: Students().studentsName.map((String name) {
+    ListView.builder(
+      itemCount: Students().studentsName.length,
+      itemBuilder: (BuildContext context, int index) {
         return InfoBox(
-          name: name,
-          message: Students().studentInfo[name].signal,
-          sukiLevel: Students().studentInfo[name].sukiLevel,
-          onInfoBoxTap: () {},
+          name: Students().studentsName[index],
+          message: Students().studentInfo[Students().studentsName[index]].signal,
+          sukiLevel: Students().studentInfo[Students().studentsName[index]].sukiLevel,
+          onInfoBoxTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PersonalHomepage(
+                  name: Students().studentsName[index],
+                ),
+              ),
+            );
+          },
         );
-      }).toList(),
+      },
     ),
     //message page
     Text('second page'),
