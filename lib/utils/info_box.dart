@@ -24,11 +24,11 @@ class InfoBox extends StatelessWidget {
       ),
       title: Text(
         name,
-        style: nameTextStyle,
+        style: headlineTextStyle,
       ),
       subtitle: Text(
         message,
-        style: msgTextStyle,
+        style: subtitleTextStyle,
         overflow: TextOverflow.ellipsis,
       ),
       trailing: DecoratedIcon(

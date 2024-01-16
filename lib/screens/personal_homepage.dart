@@ -53,11 +53,11 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                 SizedBox(width: 8),
                 Text(
                   widget.name,
-                  style: nameTextStyle,
+                  style: headlineTextStyle,
                 ),
                 Text(
                   Students().studentInfo[widget.name].signal,
-                  style: msgTextStyle,
+                  style: subtitleTextStyle,
                 ),
               ],
             ),
@@ -77,11 +77,12 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                       SizedBox(width: 8),
                       Icon(
                         LineIcons.birthdayCake,
+                        color: cakeIconColor,
                       ),
                       SizedBox(width: 8),
                       Text(
                         Students().studentInfo[widget.name].birthday,
-                        style: msgTextStyle,
+                        style: birthdayTextStyle,
                       ),
                       SizedBox(width: 8),
                     ],
@@ -109,11 +110,11 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                   child: Center(
                     child: Text(
                       '羁绊等级奖励',
-                      style: nameTextStyle,
+                      style: blueTextStyle,
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.blue[200],
+                    color: blueBoxColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(8.0),
                       topRight: Radius.circular(8.0),
@@ -129,14 +130,17 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                         child: Row(
                           children: [
                             Expanded(
-                              child: ListTile(
-                                leading: Text(
-                                  '攻击力',
-                                  style: nameTextStyle,
-                                ),
-                                trailing: Text(
-                                  '70',
-                                  style: nameTextStyle,
+                              child: Container(
+                                color: grayBoxColor,
+                                child: ListTile(
+                                  leading: Text(
+                                    '攻击力',
+                                    style: headlineTextStyle,
+                                  ),
+                                  trailing: Text(
+                                    '70',
+                                    style: headlineTextStyle,
+                                  ),
                                 ),
                               ),
                             ),
@@ -145,7 +149,10 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                               color: Theme.of(context).colorScheme.outline,
                             ),
                             Expanded(
-                              child: ListTile(),
+                              child: Container(
+                                color: grayBoxColor,
+                                child: ListTile(),
+                              ),
                             )
                           ],
                         ),
@@ -157,11 +164,11 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                               child: ListTile(
                                 leading: Text(
                                   '最大能力',
-                                  style: nameTextStyle,
+                                  style: headlineTextStyle,
                                 ),
                                 trailing: Text(
                                   '634',
-                                  style: nameTextStyle,
+                                  style: headlineTextStyle,
                                 ),
                               ),
                             ),
@@ -184,11 +191,11 @@ class _PersonalHomepageState extends State<PersonalHomepage> {
                   child: Center(
                     child: Text(
                       '奖励对象',
-                      style: nameTextStyle,
+                      style: blueTextStyle,
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.blue[200],
+                    color: blueBoxColor,
                   ),
                 ),
                 SizedBox(height: 80.0),

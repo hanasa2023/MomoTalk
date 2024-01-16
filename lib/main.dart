@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.light(
           primary: Colors.pink[200]!,
-          outline: Color(0xffc3c3c3),
+          outline: Color(0xffc4cdd6),
         ),
         useMaterial3: true,
       ),
